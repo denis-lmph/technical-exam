@@ -1,0 +1,60 @@
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 600;
+$font-weight-bold: bold;
+
+//== Colors
+//
+//## Brand colors 
+
+$primary-color: #001e5a;
+$secondary-color: #d8921f;
+$gold: #fbd243;
+$green: #3e9d03;
+
+//
+$white: #ffffff;
+$black: #000000;
+$dark: #010101;
+
+// Grays
+$gray:#929ba4;
+
+$menu-link-color: $black;
+
+
+//== Scaffolding
+//
+//## Settings for some of the most global styles.
+
+//** Background color for `<body>`.
+$body-bg: $white;
+$body-color: $dark;
+$body-gradient: $dark;
+
+//** Global text color on `<body>`.
+$text-color: $white;
+
+//== Typography
+//
+//## Font, line-height, and color for body text, headings, and more.
+
+$font-family-sans-serif: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+$font-family-base: 'Gotham', sans-serif;
+
+// Fonts
+//
+// Font, line-height, and color for body text, headings, and more.
+$small-font-size: pxToRem(12, 10);
+
+$font-size-lg: pxToRem(16, 10);
+$font-size-sm: pxToRem(14, 10);
+
+// == heading font sizes
+$h1-font-size: pxToRem(32, 10);
+$h2-font-size: pxToRem(26, 10);
+$h3-font-size: pxToRem(24, 10);
+$h4-font-size: pxToRem(18, 10);
+$h5-font-size: pxToRem(16, 10);
+$h6-font-size: pxToRem(14, 10);
+

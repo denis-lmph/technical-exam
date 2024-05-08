@@ -20,21 +20,20 @@ function minifyJS() {
         .pipe(dest('dist/js'));
 }
 
-function copyHTML() {
-    return src('src/**/*.html')
-        .pipe(dest('dist'));
-}
+// function copyHTML() {
+//     return src('src/**/*.html')
+//         .pipe(dest('dist'));
+// }
 
-function copyImages() {
-    return src('src/images/**/*')
-        .pipe(dest('dist/images'));
-}
+// function copyImages() {
+//     return src('src/images/**/*')
+//         .pipe(dest('dist/images'));
+// }
 
 function watchFiles() {
     watch('src/scss/**/*.scss', compileSass);
     watch('src/js/**/*.js', minifyJS);
-    watch('src/**/*.html', copyHTML);
-    watch('src/images/**/*', copyImages);
 }
 
-exports.default = series(compileSass, minifyJS, copyHTML, copyImages, watchFiles);
+//exports.default = series(compileSass, minifyJS, copyHTML, copyImages, watchFiles);
+exports.default = series(compileSass, minifyJS, watchFiles);
