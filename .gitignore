@@ -6,3 +6,4 @@ node_modules/
 
 # Ignore any local configuration files
 .env
+.DS_Store
