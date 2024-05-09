@@ -1,31 +1,200 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PSD to Web Page Exam</title>
-    <link rel="stylesheet" href="dist/css/style.min.css">
-    <link rel="stylesheet" href="src/fonts/gotham/fonts.css">
-    <link rel="stylesheet" href="src/fonts/icomoon/icons.css">
-</head>
-<body>
-    <header>
-        <h1>LEGAL MATCH</h1>
-    </header>
-    <main id="content" class="main">
-        <section class="find-lawyer">
-            <h2>Find a Lawyer</h2>
-            <form>
-                <label for="zipcode">Zip Code:</label>
-                <input type="text" id="zipcode" name="zipcode" placeholder="Enter Zip Code">
-                <button type="submit">Search</button>
-            </form>
-        </section>
-    </main>
-    <footer>
-        <p>Footer</p>
-    </footer>
-</body>
-<script src="dist/js/script.min.js"></script>
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title></title>
+      <link rel="stylesheet" href="dist/css/style.min.css">
+      <link rel="stylesheet" href="src/fonts/gotham/fonts.css">
+      <link rel="stylesheet" href="src/fonts/icomoon/icons.css">
+   </head>
+   <body>
+      <header class="header">
+         <div class="container">
+            <div class="header__logo">
+               <a href="#"><img src="src/images/md.svg" alt="Logo"></a>
+               <span class="header__text">Find the right lawyer now</span>
+            </div>
+            <div class="header__list">
+               <ul>
+                  <li><span class="icon-checkmark"></span><span class="text"> No fee to present your case</span></li>
+                  <li><span class="icon-checkmark"></span><span class="text"> Choose from lawyers in your area</span> </li>
+                  <li><span class="icon-checkmark"></span><span class="text"> A 100% confidential service</span> </li>
+               </ul>
+            </div>
+         </div>
+      </header>
+      <main id="content" class="main">
+         <section class="find-lawyer-section">
+            <div class="container">
+               <h1 class="section-heading">Find a Lawyer for your Legal Issue</h1>
+               <p class="section-subheading">Fast, Free and Confidential</p>
+               <div class="two-column-container">
+                  <div class="finder-block">
+                     <form class="finder-form">
+                        <div class="form-group">
+                           <label for="zipcode">Enter Zip Code or City:</label>
+                           <input  class="search-input" placeholder="Does not have to be where you live" id="zipcode" name="zipcode">
+                        </div>
+                        <div class="form-group">
+                           <label for="category">Choose a category:</label>
+                           <select id="category" name="category">
+                              <option value="" disabled selected>Click to choose a legal category</option>
+                              <option value="option2">Option 2</option>
+                              <option value="option3">Option 3</option>
+                           </select>
+                        </div>
+                        <p class="more-category">Can’t find your category? <a href="#" id="clickhere">Click here.</a></p>
+                     </form>
+                  </div>
+                  <div class="testimonial-block">
+                     <h2 class="title">Clients review LegalMatch lawyers</h2>
+                     <div class="testimonials">
+                        <div class="testimonial-item">
+                           <div class="testimonial-left">
+                              <img src="src/images/person1.png" alt="Person 1 Image">
+                              <div class="fullname">Mitchell M.</div>
+                              <div class="location">Cherry Hill, NJ</div>
+                           </div>
+                           <div class="testimonial-right">
+                              <div class="post-rating">
+                                 <span class="position">Family Law</span>
+                                 <div class="star-ratings">
+                                    <span class="icon-star-full active"></span>
+                                    <span class="icon-star-full active"></span>
+                                    <span class="icon-star-full active"></span>
+                                    <span class="icon-star-full active"></span>
+                                    <span class="icon-star-full active"></span>
+                                 </div>
+                              </div>
+                              <div class="testimonial-saying">
+                                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis auctor lorem nec ex ullamcorper, quis viverra mi pharetra."
+                              </div>
+                              <a href="#" class="review-link">
+                                 Read Review  <span class="icon-book"></span>
+                              </a>
+                           </div>
+                        </div>
+                        <div class="testimonial-item">
+                           <div class="testimonial-left">
+                              <img src="src/images/person2.png" alt="Person 1 Image">
+                              <div class="fullname">Joel C.</div>
+                              <div class="location">Little Rock, AK</div>
+                           </div>
+                           <div class="testimonial-right">
+                              <div class="post-rating">
+                                 <span class="position">Job & Employment Law</span>
+                                 <div class="star-ratings">
+                                    <span class="icon-star-full active"></span>
+                                    <span class="icon-star-full active"></span>
+                                    <span class="icon-star-full active"></span>
+                                    <span class="icon-star-full active"></span>
+                                    <span class="icon-star-full active"></span>
+                                 </div>
+                              </div>
+                              <div class="testimonial-saying">
+                                 “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore ... dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip” 
+                              </div>
+                              <a href="#" class="review-link">
+                                 Read Review  <span class="icon-book"></span>
+                              </a>
+                           </div>
+                        </div>
+                        <div class="testimonial-item">
+                           <div class="testimonial-left">
+                              <img src="src/images/person3.png" alt="Person 1 Image">
+                              <div class="fullname">Brigida R.</div>
+                              <div class="location">Dallas, TX</div>
+                           </div>
+                           <div class="testimonial-right">
+                              <div class="post-rating">
+                                 <span class="position">Family Law</span>
+                                 <div class="star-ratings">
+                                    <span class="icon-star-full active"></span>
+                                    <span class="icon-star-full active"></span>
+                                    <span class="icon-star-full active"></span>
+                                    <span class="icon-star-full active"></span>
+                                    <span class="icon-star-full active"></span>
+                                 </div>
+                              </div>
+                              <div class="testimonial-saying">
+                                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut ... 
+                              </div>
+                              <a href="#" class="review-link">
+                                 Read Review  <span class="icon-book"></span>
+                              </a>
+                           </div>
+                        </div>
+
+
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+      </main>
+      <footer class="footer">
+         <div class="container">
+            <div class="footer__logo">
+               <img src="src/images/footer-logo.png" alt="Logo">
+            </div>
+            <div class="footer__details">
+               <div class="footer__nav">
+                  <ul class="quicklinks-menu">
+                     <li><a href="#">User Agreement</a></li>
+                     <li><a href="#">Privacy Policy</a></li>
+                     <li><a href="#">Site Map</a></li>
+                  </ul>
+               </div>
+               <div class="copyright footer__copyright">
+                  <span class="footer__copyright-text">Copy 1999-2016 LegalMatch. All rights reserved. LegalMatch®, <br/>
+                  the LegalMatch logo, and the tradedress are trademarks of LegalMatch. Patents Pending.
+                  </span>
+               </div>
+            </div>
+            <div class="footer__awards"> 
+               <img src="src/images/truste-verified.png" alt="Award 1"> 
+               <img src="src/images/accredited-logo.png" alt="Award 2"> 
+            </div>
+         </div>
+      </footer>
+   </body>
+   <script src="dist/js/script.min.js"></script>
 </html>
+
+
+<div id="myModal" class="modal">
+    <div class="modal-content" id="modalContent">
+        <span class="close">&times;</span>
+        <div id="modalContent1" style="display: none;">
+            <h2>Modal Content 1</h2>
+            <p>This is the content for Button 1.</p>
+        </div>
+        <div id="modalContent2" style="display: none;">
+            <h2 class="title">Client Reviews</h2>
+           <div>
+               <div class="review-profile">
+                  <img src="src/images/person3.png" alt="Person 1 Image">
+                  <div class="fullname">Brigida R.</div>
+                  <div class="location">Dallas, TX</div>
+                  <span class="position">Family Law</span>
+               </div>
+               <div class="review-ratings">
+                  <span class="rating-title">Rating</span> <span class="user-counts">29 users</span>
+                  <div class="star-ratings">
+                     <span class="icon-star-full active"></span>
+                     <span class="icon-star-full active"></span>
+                     <span class="icon-star-full active"></span>
+                     <span class="icon-star-full active"></span>
+                     <span class="icon-star-full active"></span>
+                  </div>
+               </div>
+            </div>
+        </div>
+        <div id="modalContent3" style="display: none;">
+            <h2>Modal Content 3</h2>
+            <p>This is the content for Button 3.</p>
+        </div>
+    </div>
+</div>

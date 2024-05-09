@@ -1,0 +1,187 @@
+body {
+  font-family: $font-family-base;
+  margin: 0;
+  padding: 0;
+  color: $white;
+}
+
+main {
+  flex: 1 1 0;
+  margin: 0 auto;
+}
+
+section.find-lawyer-section {
+  background: rgba(3, 44, 107, 1) 100%;
+  background-image: linear-gradient(
+    to bottom,
+    #001e5a,
+    #003472,
+    #014a8a,
+    #0762a1,
+    #157ab8
+  );
+
+  padding: 40px 0 40px 0;
+
+  .section-heading {
+    font-weight: $font-weight-light;
+    margin-bottom: 10px;
+  }
+  .section-subheading {
+    font-size: $font-size-25;
+    font-weight: $font-weight-medium;
+    margin: 0 0 40px 0;
+    @media (min-width: 992px) {
+      font-size: $font-size-30;
+    }
+  }
+}
+/** Finder Form **/
+.finder-block {
+  flex: 0 0 60%;
+  padding-right: 20px;
+}
+
+.finder-form {
+  max-width: 80%;
+  .form-group {
+    margin-bottom: 20px;
+
+    label {
+      font-size: $font-size-18;
+      display: block;
+
+      font-weight: $font-weight-medium;
+      font-size: $font-size-18;
+      margin-bottom: 10px;
+    }
+
+    input {
+      width: 85%;
+      padding: 20px 0px 20px 40px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 50px;
+    }
+    select {
+      width: 100%;
+      padding: 20px 0px 20px 40px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 50px;
+    }
+
+    input,
+    select {
+      max-width: 500px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Drop shadow */
+    }
+    select option {
+      font-size: $font-size-14;
+      color: #333;
+    }
+
+    select {
+      appearance: none; /* Remove default dropdown arrow */
+      background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23808080"><path d="M7 10l5 5 5-5H7z"/></svg>')
+        no-repeat right 10px center;
+      background-color: $white;
+      background-size: 12px;
+      padding-right: 30px; /* Adjust for the arrow */
+    }
+
+  }
+  .more-category ,
+  .more-category a {
+    color:$white;
+    font-size: $font-size-18;
+    text-align: center;
+  }
+}
+/** Testimonials **/
+
+.testimonial-block {
+  flex: 0 0 40%;
+  padding-left: 20px;
+  .title {
+    font-size: $font-size-20;
+    font-weight: normal;
+  }
+}
+
+.testimonials {
+  display: flex;
+  flex-direction: column;
+
+  .testimonial-item {
+    display: flex;
+    width: 100%;
+    padding: 20px 0 ;
+
+    .testimonial-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding-right: 10px;
+      width: 100px;
+      img {
+        height: 62px;
+        width: 62px;
+        border-radius: 50%;
+      }
+
+      .fullname {
+        margin-top: 10px;
+        font-size: $font-size-13;
+        font-weight: $font-weight-medium;
+      }
+      .location {
+        font-size: $font-size-11;
+        font-weight: $font-weight-medium;
+      }
+    }
+
+    .testimonial-right {
+      flex: 0 0 70%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      padding-right: 10px;
+      .post-rating {
+        display: flex;
+        .position {
+          font-size: $font-size-12;
+          font-weight: $font-weight-medium;
+        }
+      }
+
+      .testimonial-saying {
+        font-size: $font-size-11;
+        font-style: italic;
+        color: $white;
+      }
+
+      .review-link {
+        color: $gold;
+        text-align: right;
+        font-size: $smallest-font-size;
+        text-decoration: none;
+      }
+    }
+  }
+  .testimonial-item:not(:last-child) {
+    border-bottom: 1px solid #eee;
+  }
+}
+
+.star-ratings {
+  display: inline-block;
+  padding-left: 20px;
+  .active {
+    color: $gold;
+  }
+  .inactive {
+    color: $gray;
+  }
+}

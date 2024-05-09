@@ -6,5 +6,5 @@
  */
  @function pxToRem($input, $default: 10px) {
     @return ($input / $default) * 1rem;
+    // @return calc(#{$input} / #{$default} * 1rem);
   }
-  

@@ -3,52 +3,488 @@
  * Default value is 10px, since we are using 10px as a browser's default font size to make it easy to calculate
  * Eg, it's easier to calculate 50px gap with 10px threshold rather than 16px or 18px.
  */
+html {
+  font-size: 62.5%;
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100%;
+}
+
+p > a {
+  text-decoration: underline;
+}
+p > a:hover {
+  text-decoration: underline;
+}
+@media (min-width: 992px) {
+  p {
+    /* lg breakpoint */
+    margin-bottom: 3rem;
+  }
+}
+
+ul,
+ol {
+  margin-bottom: 2.5rem;
+}
+
+*:last-child {
+  margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  h1,
+  .h1 {
+    /* md breakpoint */
+    font-size: 3.6rem;
+  }
+}
+@media (min-width: 992px) {
+  h1,
+  .h1 {
+    /* lg breakpoint */
+    font-size: 4.2rem;
+    margin: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  h2,
+  .h2 {
+    /* md breakpoint */
+    font-size: 2.8rem;
+  }
+}
+@media (min-width: 992px) {
+  h2,
+  .h2 {
+    /* lg breakpoint */
+    font-size: 3rem;
+  }
+}
+
+@media (min-width: 992px) {
+  h3,
+  .h3 {
+    /* lg breakpoint */
+    font-size: 2.4rem;
+  }
+}
+
+h4,
+.h4 {
+  line-height: 1.5;
+}
+
+h5,
+.h5 {
+  line-height: 1.3333333333;
+}
+
 body {
   font-family: "Gotham", sans-serif;
   margin: 0;
   padding: 0;
-}
-
-header, footer {
-  background-color: #001e5a;
-  color: white;
-  text-align: center;
-  padding: 10px 0;
+  color: #ffffff;
 }
 
 main {
-  max-width: 800px;
+  flex: 1 1 0;
   margin: 0 auto;
-  padding: 20px;
 }
 
-section.find-lawyer {
-  background-color: #d8921f;
-  padding: 20px;
-  margin-top: 20px;
+section.find-lawyer-section {
+  background: rgb(3, 44, 107) 100%;
+  background-image: linear-gradient(to bottom, #001e5a, #003472, #014a8a, #0762a1, #157ab8);
+  padding: 40px 0 40px 0;
 }
-section.find-lawyer form {
+section.find-lawyer-section .section-heading {
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+section.find-lawyer-section .section-subheading {
+  font-size: 2.5rem;
+  font-weight: 500;
+  margin: 0 0 40px 0;
+}
+@media (min-width: 992px) {
+  section.find-lawyer-section .section-subheading {
+    font-size: 3rem;
+  }
+}
+
+/** Finder Form **/
+.finder-block {
+  flex: 0 0 60%;
+  padding-right: 20px;
+}
+
+.finder-form {
+  max-width: 80%;
+}
+.finder-form .form-group {
+  margin-bottom: 20px;
+}
+.finder-form .form-group label {
+  font-size: 1.8rem;
+  display: block;
+  font-weight: 500;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+.finder-form .form-group input {
+  width: 85%;
+  padding: 20px 0px 20px 40px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+}
+.finder-form .form-group select {
+  width: 100%;
+  padding: 20px 0px 20px 40px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 50px;
+}
+.finder-form .form-group input,
+.finder-form .form-group select {
+  max-width: 500px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Drop shadow */
+}
+.finder-form .form-group select option {
+  font-size: 1.4rem;
+  color: #333;
+}
+.finder-form .form-group select {
+  appearance: none; /* Remove default dropdown arrow */
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23808080"><path d="M7 10l5 5 5-5H7z"/></svg>') no-repeat right 10px center;
+  background-color: #ffffff;
+  background-size: 12px;
+  padding-right: 30px; /* Adjust for the arrow */
+}
+.finder-form .more-category,
+.finder-form .more-category a {
+  color: #ffffff;
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+/** Testimonials **/
+.testimonial-block {
+  flex: 0 0 40%;
+  padding-left: 20px;
+}
+.testimonial-block .title {
+  font-size: 2rem;
+  font-weight: normal;
+}
+
+.testimonials {
   display: flex;
+  flex-direction: column;
+}
+.testimonials .testimonial-item {
+  display: flex;
+  width: 100%;
+  padding: 20px 0;
+}
+.testimonials .testimonial-item .testimonial-left {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  padding-right: 10px;
+  width: 100px;
 }
-section.find-lawyer form label {
+.testimonials .testimonial-item .testimonial-left img {
+  height: 62px;
+  width: 62px;
+  border-radius: 50%;
+}
+.testimonials .testimonial-item .testimonial-left .fullname {
+  margin-top: 10px;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+.testimonials .testimonial-item .testimonial-left .location {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+.testimonials .testimonial-item .testimonial-right {
+  flex: 0 0 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-right: 10px;
+}
+.testimonials .testimonial-item .testimonial-right .post-rating {
+  display: flex;
+}
+.testimonials .testimonial-item .testimonial-right .post-rating .position {
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+.testimonials .testimonial-item .testimonial-right .testimonial-saying {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: #ffffff;
+}
+.testimonials .testimonial-item .testimonial-right .review-link {
+  color: #fbd243;
+  text-align: right;
+  font-size: 1rem;
+  text-decoration: none;
+}
+.testimonials .testimonial-item:not(:last-child) {
+  border-bottom: 1px solid #eee;
+}
+
+.star-ratings {
+  display: inline-block;
+  padding-left: 20px;
+}
+.star-ratings .active {
+  color: #fbd243;
+}
+.star-ratings .inactive {
+  color: #97a8a7;
+}
+
+.header {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 15px 0;
+}
+.header .container {
+  display: flex;
+  justify-content: space-between;
+}
+.header .header__logo {
+  display: flex;
+  flex-direction: column;
+}
+.header .header__logo img {
+  width: 100%;
+  height: auto;
+  margin-right: 10px;
+  max-width: 180px;
+}
+.header .header__text {
+  font-size: 1rem;
+  padding-bottom: 10px;
+  font-weight: 600;
+  color: #001e5a;
+  text-transform: uppercase;
+}
+.header .header__list ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.header .header__list ul li {
+  display: block;
+}
+.header .header__list ul li .icon-checkmark {
+  color: #3e9d03;
+}
+.header .header__list ul li .text {
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+.header .header__list ul li:not(:last-child) {
+  margin-bottom: 10px;
+}
+@media (min-width: 768px) {
+  .header {
+    /* md breakpoint */
+  }
+  .header .header__logo {
+    flex-direction: row;
+    align-items: end;
+  }
+  .header .header__logo img {
+    max-width: 280px;
+  }
+  .header .header__text {
+    font-size: 1.3rem;
+  }
+}
+
+.footer {
+  background-color: #ffffff;
+  color: #97a8a7;
+  padding: 30px 0 60px;
+}
+.footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 40px;
+  border-bottom: 1px solid #eee;
+}
+.footer .footer__logo {
+  align-self: start;
+}
+.footer img {
+  width: 100%;
+}
+.footer .footer__details {
+  flex: 1 1 auto;
+}
+.footer .footer__copyright {
+  text-align: center;
+  font-size: 12px;
+  line-height: 2;
+}
+.footer .footer__nav {
+  padding: 0px 15px 40px;
+}
+.footer .footer__nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.footer .footer__nav ul li {
+  display: inline-block;
+}
+.footer .footer__nav ul li:not(:first-child):before {
+  content: ".";
+  font-size: 30px;
+  position: relative;
+  top: -2px;
+  margin-right: 15px;
+}
+.footer .footer__nav ul li:nth-child(2) {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.footer .footer__nav ul li a {
+  color: #97a8a7;
+  text-decoration: none;
+  font-size: 1.4rem;
+}
+.footer .footer__nav ul li a:hover {
+  text-decoration: underline;
+}
+.footer .footer__awards {
+  display: flex;
+  flex-direction: column;
+}
+.footer .footer__awards img {
+  width: 100%;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.col-auto {
+  flex: 0 0 auto;
+  width: auto;
+  max-width: 100%;
+}
+
+.container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
+  width: 100%;
+  padding-right: 12px;
+  padding-left: 12px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 576px) {
+  .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 570px;
+  }
+}
+@media (min-width: 768px) {
+  .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 1132px;
+  }
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -12px;
+  margin-left: -12px;
+}
+
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.two-column-container {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+@media (min-width: 992px) {
+  .two-column-container {
+    /* lg breakpoint */
+    flex-direction: row;
+  }
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.4); /* Black with opacity */
+  color: #212121;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 600px; /* Set width to 600px */
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
   font-weight: bold;
 }
-section.find-lawyer form input[type=text] {
-  padding: 5px;
-  border: 1px solid #001e5a;
-  border-radius: 3px;
-}
-section.find-lawyer form button {
-  padding: 5px 10px;
-  background-color: #001e5a;
-  color: white;
-  border: none;
-  border-radius: 3px;
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
   cursor: pointer;
 }
-section.find-lawyer form button:hover {
-  background-color: #000d27;
+
+.search-container {
+  position: relative;
+}
+
+.search-results {
+  display: none;
+  position: absolute;
+  background-color: gray;
+}
+
+.highlight {
+  font-weight: bold;
+  color: blue;
 }

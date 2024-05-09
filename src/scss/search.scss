@@ -1,0 +1,15 @@
+.search-container {
+    position: relative;
+  }
+  
+  .search-results {
+    display: none;
+    position: absolute;
+    background-color: gray;
+  }
+  
+  .highlight {
+    // background-color: yellow;
+    font-weight: bold;
+    color: blue;
+  }

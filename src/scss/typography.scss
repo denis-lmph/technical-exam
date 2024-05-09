@@ -1,0 +1,91 @@
+html {
+  font-size: 62.5%; //~10/16px, where 16px is a default font size of the browser
+  height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100%;
+}
+
+p {
+  > a {
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  @media (min-width: 992px) {
+    /* lg breakpoint */
+    margin-bottom: $paragraph-lg-margin-bottom;
+  }
+}
+
+ul,
+ol {
+  margin-bottom: $paragraph-margin-bottom;
+}
+
+* {
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// == Typography
+// ## Headings
+// ##
+h1,
+.h1 {
+  @media (min-width: 768px) {
+    /* md breakpoint */
+    font-size: pxToRem(36, 10);
+  }
+
+  @media (min-width: 992px) {
+    /* lg breakpoint */
+    font-size: $h1-font-lg-size;
+    margin: 0;
+  }
+}
+
+h2,
+.h2 {
+  // margin-bottom: pxToRem(20, 10);
+  // line-height: (34/32);
+  @media (min-width: 768px) {
+    /* md breakpoint */
+    font-size: pxToRem(28, 10);
+    // line-height: (38/32);
+  }
+
+  @media (min-width: 992px) {
+    /* lg breakpoint */
+    // margin-bottom: pxToRem(30, 10);
+    font-size: $h2-font-lg-size;
+    // line-height: (42/36);
+  }
+}
+
+h3,
+.h3 {
+  @media (min-width: 992px) {
+    /* lg breakpoint */
+    font-size: $h3-font-lg-size;
+    // margin-bottom: pxToRem(24, 10);
+    // line-height: (32/26);
+  }
+}
+
+h4,
+.h4 {
+  line-height: (30/20);
+}
+
+h5,
+.h5 {
+  line-height: (24/18);
+}
