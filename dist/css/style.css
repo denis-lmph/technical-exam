@@ -455,9 +455,10 @@ section.find-lawyer-section .section-subheading {
 .modal-content {
   background-color: #fefefe;
   margin: 15% auto; /* 15% from the top and centered */
-  padding: 20px;
+  padding: 30px;
   border: 1px solid #888;
   width: 600px; /* Set width to 600px */
+  border-radius: 5px;
 }
 
 .close {
@@ -472,6 +473,39 @@ section.find-lawyer-section .section-subheading {
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+
+#modalContent2 .title {
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin: 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+#modalContent2 .review-profile {
+  display: flex;
+  padding: 20px 0 20px 0;
+}
+#modalContent2 .review-profile .details {
+  align-content: center;
+  padding-left: 20px;
+}
+#modalContent2 .review-profile .details .fullname {
+  font-size: 3rem;
+}
+#modalContent2 .review-profile .details .location {
+  font-size: 1.6rem;
+  color: #97a8a7;
+}
+#modalContent2 .review-profile .details .position {
+  font-size: 1.6rem;
+}
+#modalContent2 .review-profile .review-ratings {
+  border-bottom: 1px solid #eee;
+}
+#modalContent2 .review-profile .review-ratings span {
+  font-size: 3rem;
 }
 
 .search-container {
