@@ -622,7 +622,11 @@ section.find-lawyer-section .section-subheading {
   position: relative;
   display: inline-block;
   width: 100%;
-  max-width: 500px;
+}
+@media (min-width: 992px) {
+  .dropdown {
+    max-width: 500px;
+  }
 }
 
 .dropdown-toggle {
@@ -634,7 +638,6 @@ section.find-lawyer-section .section-subheading {
   padding: 20px 30px 20px 40px;
   width: 100%;
   text-align: left;
-  max-width: 500px;
   border-radius: 50px;
   color: #757575;
 }

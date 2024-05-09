@@ -2,7 +2,11 @@
     position: relative;
     display: inline-block;
     width: 100%;
-    max-width: 500px;
+    // max-width: 500px;
+
+    @media (min-width: 992px) {
+      max-width: 500px;
+    }
   }
   
   .dropdown-toggle {
@@ -14,7 +18,7 @@
     padding: 20px 30px 20px 40px;
     width: 100%;
     text-align: left;
-    max-width: 500px;
+ 
     border-radius: 50px;
     color: #757575;
   }
