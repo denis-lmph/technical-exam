@@ -84,10 +84,10 @@ window.ct = function (selector) {
 // Initialize components when document is ready
 document.addEventListener("DOMContentLoaded", function () {
   const data = [
-    { label: "Nowheresville, XX  00000" },
-    { label: "California, XX  12345" },
-    { label: "Fake Street, XX  68910" },
-    { label: "Queensland, XX  11111" }
+    { label: "Nowheresville, XX 00000" },
+    { label: "California, XX 12345" },
+    { label: "Fake Street, XX 68910" },
+    { label: "Queensland, XX 11111" }
   ];
 
   ct(".search-input").makeSearchInput({ data });
@@ -151,4 +151,39 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
 
+
+
+
+
+
+
+
+
+
+var dp = function (){
+
+  var dropdownToggle = document.querySelector('.dropdown-toggle');
+  var dropdownMenu = document.querySelector('.dropdown-menu');
+
+  dropdownToggle.addEventListener('click', function() {
+      if (dropdownMenu.style.display === 'block') {
+          dropdownMenu.style.display = 'none';
+      } else {
+          dropdownMenu.style.display = 'block';
+      }
+  });
+
+  document.addEventListener('click', function(event) {
+      if (!dropdownToggle.contains(event.target) && !dropdownMenu.contains(event.target)) {
+          dropdownMenu.style.display = 'none';
+      }
+  });
+
+
+}();
+
+
 });
+
+
+

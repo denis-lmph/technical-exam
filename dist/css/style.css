@@ -100,6 +100,7 @@ main {
 section.find-lawyer-section {
   background: rgb(3, 44, 107) 100%;
   background-image: linear-gradient(to bottom, #001e5a, #003472, #014a8a, #0762a1, #157ab8);
+  position: relative;
   padding: 40px 0 40px 0;
 }
 section.find-lawyer-section .section-heading {
@@ -119,15 +120,26 @@ section.find-lawyer-section .section-subheading {
 
 /** Finder Form **/
 .finder-block {
-  flex: 0 0 60%;
-  padding-right: 20px;
+  flex: 0 0 100%;
+}
+@media (min-width: 992px) {
+  .finder-block {
+    flex: 0 0 60%;
+    padding-right: 20px;
+  }
 }
 
 .finder-form {
-  max-width: 80%;
+  max-width: 100%;
+}
+@media (min-width: 992px) {
+  .finder-form {
+    max-width: 80%;
+  }
 }
 .finder-form .form-group {
   margin-bottom: 20px;
+  position: relative;
 }
 .finder-form .form-group label {
   font-size: 1.8rem;
@@ -137,11 +149,30 @@ section.find-lawyer-section .section-subheading {
   margin-bottom: 10px;
 }
 .finder-form .form-group input {
-  width: 85%;
+  width: 95%;
   padding: 20px 0px 20px 40px;
   font-size: 14px;
   border: 1px solid #ccc;
   border-radius: 50px;
+}
+@media (min-width: 992px) {
+  .finder-form .form-group input {
+    width: 85%;
+  }
+}
+.finder-form .form-group .badge {
+  position: absolute;
+  top: 68%;
+  left: 10px;
+  transform: translateY(-50%);
+  background-color: #d8921f;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  font-size: 12px;
 }
 .finder-form .form-group select {
   width: 100%;
@@ -152,9 +183,14 @@ section.find-lawyer-section .section-subheading {
 }
 .finder-form .form-group input,
 .finder-form .form-group select {
-  max-width: 500px;
   color: #97a8a7;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Drop shadow */
+}
+@media (min-width: 992px) {
+  .finder-form .form-group input,
+  .finder-form .form-group select {
+    max-width: 500px;
+  }
 }
 .finder-form .form-group select option {
   font-size: 1.4rem;
@@ -180,11 +216,16 @@ section.find-lawyer-section .section-subheading {
 /** Testimonials **/
 .testimonial-block {
   flex: 0 0 40%;
-  padding-left: 20px;
+  padding-top: 20px;
 }
 .testimonial-block .title {
   font-size: 2rem;
   font-weight: normal;
+}
+@media (min-width: 992px) {
+  .testimonial-block {
+    padding-left: 20px;
+  }
 }
 
 .testimonials {
@@ -563,10 +604,78 @@ section.find-lawyer-section .section-subheading {
 .search-results {
   display: none;
   position: absolute;
-  background-color: gray;
+  padding: 10px;
+  background: rgb(255, 255, 255);
+  list-style: none;
+  z-index: 99;
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+  margin-top: 0px;
 }
 
 .highlight {
   font-weight: bold;
   color: blue;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 500px;
+}
+
+.dropdown-toggle {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 10px 20px;
+  cursor: pointer;
+  background-size: 30px;
+  padding: 20px 30px 20px 40px;
+  width: 100%;
+  text-align: left;
+  max-width: 500px;
+  border-radius: 50px;
+  color: #757575;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  margin-top: 10px;
+  border-radius: 10px;
+}
+
+.dropdown-menu li {
+  padding: 10px 30px;
+  margin: 10px;
+}
+
+.dropdown-menu li a {
+  text-decoration: none;
+  color: #010101;
+}
+
+.dropdown-menu li:hover {
+  background-color: #bcd3e3;
+  font-weight: 500;
+}
+
+.caret {
+  position: absolute;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  top: 50%;
+  margin-left: -30px;
+  vertical-align: middle;
+  border-top: 7px solid grey;
+  border-right: 7px solid transparent;
+  border-left: 7px solid transparent;
 }

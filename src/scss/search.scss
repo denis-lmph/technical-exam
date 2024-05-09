@@ -1,15 +1,21 @@
 .search-container {
-    position: relative;
-  }
-  
-  .search-results {
-    display: none;
-    position: absolute;
-    background-color: gray;
-  }
-  
-  .highlight {
-    // background-color: yellow;
-    font-weight: bold;
-    color: blue;
-  }
+  position: relative;
+}
+
+.search-results {
+  display: none;
+  position: absolute;
+  padding: 10px;
+  background: rgb(255, 255, 255);
+  list-style: none;
+  z-index: 99;
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+  margin-top: 0px;
+}
+
+.highlight {
+  // background-color: yellow;
+  font-weight: bold;
+  color: blue;
+}
