@@ -7,7 +7,7 @@ This is a simple project setup using Gulp for build automation with SCSS and Jav
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/your-repository.git
+   git clone https://github.com/denis-lmph/technical-exam.git
    ```
 
 2. Install dependencies:
