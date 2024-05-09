@@ -98,7 +98,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Get the <span> element that closes the modal
     var span = document.getElementsByClassName("close")[0];
-  
+
     // Get the modal content elements
     var modalContent1 = document.getElementById("modalContent1");
     var modalContent2 = document.getElementById("modalContent2");
@@ -136,6 +136,12 @@ document.addEventListener("DOMContentLoaded", function () {
     span.onclick = function () {
       modal.style.display = "none";
     };
+
+    var btnclose = document.getElementById("modalCloseBtn");
+    btnclose.onclick = function () {
+      modal.style.display = "none";
+    };
+
   
     // When the user clicks anywhere outside of the modal, close it
     window.onclick = function (event) {

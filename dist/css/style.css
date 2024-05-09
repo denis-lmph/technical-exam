@@ -153,18 +153,22 @@ section.find-lawyer-section .section-subheading {
 .finder-form .form-group input,
 .finder-form .form-group select {
   max-width: 500px;
+  color: #97a8a7;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Drop shadow */
 }
 .finder-form .form-group select option {
   font-size: 1.4rem;
-  color: #333;
+  color: #75758b;
 }
 .finder-form .form-group select {
   appearance: none; /* Remove default dropdown arrow */
   background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23808080"><path d="M7 10l5 5 5-5H7z"/></svg>') no-repeat right 10px center;
   background-color: #ffffff;
-  background-size: 12px;
+  background-size: 30px;
   padding-right: 30px; /* Adjust for the arrow */
+}
+.finder-form .more-category {
+  margin-left: -20px;
 }
 .finder-form .more-category,
 .finder-form .more-category a {
@@ -475,13 +479,33 @@ section.find-lawyer-section .section-subheading {
   cursor: pointer;
 }
 
+.modal-footer {
+  padding: 30px 0;
+}
+
+#modalCloseBtn {
+  color: #0000ff;
+  float: right;
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  border: 0;
+  background: none;
+}
+
+#modalCloseBtn:hover,
+#modalCloseBtn:focus {
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+}
+
 #modalContent2 .title {
   font-size: 2.4rem;
   text-transform: uppercase;
   font-weight: 400;
   margin: 0;
   padding-bottom: 10px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #010101;
 }
 #modalContent2 .review-profile {
   display: flex;
@@ -501,11 +525,35 @@ section.find-lawyer-section .section-subheading {
 #modalContent2 .review-profile .details .position {
   font-size: 1.6rem;
 }
-#modalContent2 .review-profile .review-ratings {
-  border-bottom: 1px solid #eee;
+#modalContent2 .review-ratings {
+  padding-bottom: 20px;
+  border-bottom: 1px solid #010101;
 }
-#modalContent2 .review-profile .review-ratings span {
-  font-size: 3rem;
+#modalContent2 .review-ratings .user-rating {
+  font-size: 1.8rem;
+}
+#modalContent2 .review-ratings .icon-star-full {
+  font-size: 16px;
+}
+#modalContent2 .criteria {
+  padding: 20px 0px;
+  border-bottom: 1px solid #010101;
+}
+#modalContent2 .criteria .criteria-item {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+#modalContent2 .criteria .overall {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+#modalContent2 .criteria .criteria-title {
+  font-size: 1.4rem;
+  justify-content: space-between;
+}
+#modalContent2 .criteria .icon-star-full {
+  font-size: 16px;
 }
 
 .search-container {

@@ -74,11 +74,12 @@ section.find-lawyer-section {
     input,
     select {
       max-width: 500px;
+      color: #97a8a7;
       box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Drop shadow */
     }
     select option {
       font-size: $font-size-14;
-      color: #333;
+      color: #75758b
     }
 
     select {
@@ -86,10 +87,14 @@ section.find-lawyer-section {
       background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23808080"><path d="M7 10l5 5 5-5H7z"/></svg>')
         no-repeat right 10px center;
       background-color: $white;
-      background-size: 12px;
+      background-size: 30px;
       padding-right: 30px; /* Adjust for the arrow */
     }
 
+  }
+
+  .more-category {
+    margin-left: -20px;
   }
   .more-category ,
   .more-category a {
