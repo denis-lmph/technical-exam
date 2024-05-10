@@ -272,6 +272,7 @@ section.find-lawyer-section .section-subheading {
 .testimonials .testimonial-item .testimonial-right .post-rating .position {
   font-size: 1.2rem;
   font-weight: 500;
+  margin-right: 10px;
 }
 .testimonials .testimonial-item .testimonial-right .testimonial-saying {
   font-size: 1.1rem;
