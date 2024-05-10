@@ -225,6 +225,7 @@ section.find-lawyer-section .section-subheading {
 @media (min-width: 992px) {
   .testimonial-block {
     padding-left: 20px;
+    margin-top: -60px;
   }
 }
 
