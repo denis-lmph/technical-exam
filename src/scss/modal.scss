@@ -44,6 +44,23 @@
   padding: 30px 0;
 }
 
+
+.modal-more-categories,
+.modal-reviews {
+  .modal-body {
+    max-height: 450px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+}
+
+.modal-categories,
+.modal-more-categories{
+  .modal-footer {
+  display: none;
+  }
+}
+
 #modalCloseBtn {
   color: #0000ff;
   float: right;
@@ -147,18 +164,10 @@
     }
   }
 
-  .modal-footer {
-    display: none;
-  }
+
 }
 
 .modal-reviews {
-  .modal-body {
-    padding: 20px 0px;
-    max-height: 450px;
-    overflow-x: hidden;
-    overflow-y: scroll;
-  }
 
   .title {
     font-size: $font-size-24;
@@ -242,12 +251,6 @@
 }
 
 .modal-more-categories {
-  .modal-body {
-
-    max-height: 450px;
-    overflow-x: hidden;
-    overflow-y: scroll;
-  }
 
   .title {
     font-size: $font-size-24;
