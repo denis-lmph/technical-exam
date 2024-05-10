@@ -38,29 +38,46 @@
                            <input  class="search-input" placeholder="Does not have to be where you live" id="zipcode" name="zipcode">
                            <span class="badge">1</span>
                         </div>
-                        <div class="form-group" style="display: none;">
+                        <!-- <div class="form-group" style="display: none;">
                            <label for="category">Choose a category:</label>
                            <select id="category" name="category">
                               <option value="" disabled selected>Click to choose a legal category</option>
                               <option value="option2">Option 2</option>
                               <option value="option3">Option 3</option>
                            </select>
-                        </div>
-                  
+                           </div> -->
                         <div class="form-group">
                            <label for="category">Choose a category:</label>
-                           <div class="dropdown">
-                              <button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Dropdown</button>
-                              <span class="caret"></span>
-                              <ul class="dropdown-menu">
-                                 <li  class="dropdown-item"><a href="#" >Option 1</a></li>
-                                 <li class="dropdown-item"> <a href="#"  >Option 2</a></li>
-                                 <li   class="dropdown-item"><a href="#">Option 3</a></li>
-                              </ul>
-                           </div>
-                           <span class="badge">2</span>
+                           <select class="select" data-badge="2" data-label="Choose a category:">
+                              <option data-open-modal-id="modal-1">Family</option>
+                              <option data-open-modal-id="modal-1">Criminal Defense
+                              <option data-open-modal-id="modal-1">Business</option>
+                              <option data-open-modal-id="modal-1">Personality Injury</option>
+                              <option data-open-modal-id="modal-1">Bankruptcy & Finances</option>
+                              <option data-open-modal-id="modal-1">Products & Services</option>
+                              <option data-open-modal-id="modal-1">Employment</option>
+                              <option data-open-modal-id="modal-1">Real Estate</option>
+                              <option data-open-modal-id="modal-1">Immigration</option>
+                              <option data-open-modal-id="modal-1">Wills, Trusts & Estates</option>
+                              <option data-open-modal-id="modal-1">Government</option>
+                              <option data-open-modal-id="modal-1">Intellectual Property</option>
+                           </select>
                         </div>
-                        <p class="more-category">Can’t find your category? <a href="#" id="clickhere">Click here.</a></p>
+                        <!--                   
+                           <div class="form-group">
+                              <label for="category">Choose a category:</label>
+                              <div class="dropdown">
+                                 <button class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">Dropdown</button>
+                                 <span class="caret"></span>
+                                 <ul class="dropdown-menu">
+                                    <li  class="dropdown-item" data-open-modal-id="modal-1"><a href="#" >Option 1</a></li>
+                                    <li class="dropdown-item" data-open-modal-id="modal-1"> <a href="#"  >Option 2</a></li>
+                                    <li   class="dropdown-item" data-open-modal-id="modal-1"><a href="#">Option 3</a></li>
+                                 </ul>
+                              </div>
+                              <span class="badge">2</span>
+                           </div> -->
+                        <p class="more-category">Can’t find your category? <a href="#" id="clickhere" data-open-modal-id="modal-3">Click here.</a></p>
                      </form>
                   </div>
                   <div class="testimonial-block">
@@ -86,8 +103,8 @@
                               <div class="testimonial-saying">
                                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis auctor lorem nec ex ullamcorper, quis viverra mi pharetra."
                               </div>
-                              <a href="#" class="review-link">
-                                 Read Review  <span class="icon-book"></span>
+                              <a href="#" class="review-link" data-open-modal-id="modal-2">
+                              Read Review  <span class="icon-book"></span>
                               </a>
                            </div>
                         </div>
@@ -111,8 +128,8 @@
                               <div class="testimonial-saying">
                                  “Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore ... dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip” 
                               </div>
-                              <a href="#" class="review-link">
-                                 Read Review  <span class="icon-book"></span>
+                              <a href="#" class="review-link" data-open-modal-id="modal-2">
+                              Read Review  <span class="icon-book"></span>
                               </a>
                            </div>
                         </div>
@@ -136,13 +153,11 @@
                               <div class="testimonial-saying">
                                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut ... 
                               </div>
-                              <a href="#" class="review-link">
-                                 Read Review  <span class="icon-book"></span>
+                              <a href="#" class="review-link" data-open-modal-id="modal-2">
+                              Read Review  <span class="icon-book"></span>
                               </a>
                            </div>
                         </div>
-
-
                      </div>
                   </div>
                </div>
@@ -174,21 +189,56 @@
             </div>
          </div>
       </footer>
-   </body>
-   <script src="dist/js/script.min.js"></script>
-</html>
-
-
-<div id="myModal" class="modal">
-    <div class="modal-content" id="modalContent">
-        <span class="close">&times;</span>
-        <div id="modalContent1" style="display: none;">
-            <h2>Modal Content 1</h2>
-            <p>This is the content for Button 1.</p>
-        </div>
-        <div id="modalContent2" style="display: none;">
-            <h2 class="title">Client Reviews</h2>
-           <div>
+      <div class="modal modal-categories" data-title="Modal Content 1" data-modal-id="modal-1">
+         <div class="modal-header">
+            <span class="badge">3</span>
+            <h2 class="title"> Which <span class="bold">Family law</span> issue(s) apply to your case?</h2>
+         </div>
+         <div class="modal-body">
+            <div class="checkbox-grid">
+               <label class="checkbox">
+               <input type="checkbox">
+               <span>Adoptions</span>
+               </label>
+               <label class="checkbox">
+               <input type="checkbox">
+               <span>Guardianship</span>
+               </label>
+               <label class="checkbox">
+               <input type="checkbox">
+               <span>Child Custody and Visitation</span>
+               </label>
+               <label class="checkbox">
+               <input type="checkbox">
+               <span>Paternity</span>
+               </label>
+               <label class="checkbox">
+               <input type="checkbox">
+               <span>Child Support</span>
+               </label>
+               <label class="checkbox">
+               <input type="checkbox">
+               <span>Separations</span>
+               </label>
+               <label class="checkbox">
+               <input type="checkbox">
+               <span>Divorce</span>
+               </label>
+               <label class="checkbox">
+               <input type="checkbox">
+               <span>Spousal Support or Alimony</span>
+               </label>
+            </div>
+            <button class="btn-find">FIND A LAWYER NOW</button>
+         </div>
+      </div>
+      </div>
+      <div class="modal modal-reviews" data-title="Client Reviews" data-modal-id="modal-2">
+         <div class="modal-header border-bottom">
+            <h2 class="title"> Clients Review</h2>
+         </div>
+         <div class="modal-body">
+            <div class="review">
                <div class="review-profile">
                   <img src="src/images/person3.png" alt="Person 1 Image">
                   <div class="details">
@@ -197,8 +247,8 @@
                      <span class="position">Family Law</span>
                   </div>
                </div>
-               <div class="review-ratings">
-                  <span class="user-rating">Rating 29 users</span>
+               <div class="review-ratings border-bottom">
+                  <span class="user-rating">Rated by 29 users</span>
                   <div class="star-ratings">
                      <span class="icon-star-full active"></span>
                      <span class="icon-star-full active"></span>
@@ -207,9 +257,9 @@
                      <span class="icon-star-full active"></span>
                   </div>
                </div>
-               <div class="criteria">
-                  <div class="criteria-item">
-                     <span class="criteria-item overall">Overall</span>
+               <div class="review-criteria">
+                  <div class="review-criteria-item">
+                     <span class="review-criteria-title bold">Overall</span>
                      <div class="star-ratings">
                         <span class="icon-star-full active"></span>
                         <span class="icon-star-full active"></span>
@@ -218,8 +268,8 @@
                         <span class="icon-star-full active"></span>
                      </div>
                   </div>
-                  <div class="criteria-item">
-                     <span class="criteria-title">Responded in a timely ;manner</span>
+                  <div class="review-criteria-item">
+                     <span class="review-criteria-title">Responded in a timely ;manner</span>
                      <div class="star-ratings">
                         <span class="icon-star-full active"></span>
                         <span class="icon-star-full active"></span>
@@ -228,8 +278,8 @@
                         <span class="icon-star-full active"></span>
                      </div>
                   </div>
-                  <div class="criteria-item">
-                     <span class="criteria-title">Answered questions clearly</span>
+                  <div class="review-criteria-item">
+                     <span class="review-criteria-title">Answered questions clearly</span>
                      <div class="star-ratings">
                         <span class="icon-star-full active"></span>
                         <span class="icon-star-full active"></span>
@@ -238,8 +288,8 @@
                         <span class="icon-star-full active"></span>
                      </div>
                   </div>
-                  <div class="criteria-item">
-                     <span class="criteria-title">Understood needs</span>
+                  <div class="review-criteria-item">
+                     <span class="review-criteria-title">Understood needs</span>
                      <div class="star-ratings">
                         <span class="icon-star-full active"></span>
                         <span class="icon-star-full active"></span>
@@ -248,8 +298,8 @@
                         <span class="icon-star-full active"></span>
                      </div>
                   </div>
-                  <div class="criteria-item">
-                     <span class="criteria-title">Gave complete and clear information</span>
+                  <div class="review-criteria-item">
+                     <span class="review-criteria-title">Gave complete and clear information</span>
                      <div class="star-ratings">
                         <span class="icon-star-full active"></span>
                         <span class="icon-star-full active"></span>
@@ -258,8 +308,8 @@
                         <span class="icon-star-full active"></span>
                      </div>
                   </div>
-                  <div class="criteria-item">
-                     <span class="criteria-title">Knowledgeable in legal area</span>
+                  <div class="review-criteria-item">
+                     <span class="review-criteria-title">Knowledgeable in legal area</span>
                      <div class="star-ratings">
                         <span class="icon-star-full active"></span>
                         <span class="icon-star-full active"></span>
@@ -268,8 +318,8 @@
                         <span class="icon-star-full active"></span>
                      </div>
                   </div>
-                  <div class="criteria-item">
-                     <span class="criteria-title">Good value for money</span>
+                  <div class="review-criteria-item">
+                     <span class="review-criteria-title">Good value for money</span>
                      <div class="star-ratings">
                         <span class="icon-star-full active"></span>
                         <span class="icon-star-full active"></span>
@@ -278,8 +328,8 @@
                         <span class="icon-star-full active"></span>
                      </div>
                   </div>
-                  <div class="criteria-item">
-                     <span class="criteria-title">Would hire again</span>
+                  <div class="review-criteria-item">
+                     <span class="review-criteria-title">Would hire again</span>
                      <div class="star-ratings">
                         <span class="icon-star-full active"></span>
                         <span class="icon-star-full active"></span>
@@ -288,8 +338,8 @@
                         <span class="icon-star-full active"></span>
                      </div>
                   </div>
-                  <div class="criteria-item">
-                     <span class="criteria-title">Would recommend to friend</span>
+                  <div class="review-criteria-item">
+                     <span class="review-criteria-title">Would recommend to friend</span>
                      <div class="star-ratings">
                         <span class="icon-star-full active"></span>
                         <span class="icon-star-full active"></span>
@@ -300,14 +350,116 @@
                   </div>
                </div>
             </div>
-        </div>
-        <div id="modalContent3" style="display: none;">
-            <h2>Modal Content 3</h2>
-            <p>This is the content for Button 3.</p>
-        </div>
-        <div class="modal-footer">
-         <button id="modalCloseBtn">Close</button>
-       </div>
-    </div>
- 
-</div>
+            <div class="comments">
+               <div class="comment border-bottom">
+                  <div class="comment-header">
+                     <div class="star-ratings">
+                        <span class="icon-star-full active"></span>
+                        <span class="icon-star-full active"></span>
+                        <span class="icon-star-full active"></span>
+                        <span class="icon-star-full active"></span>
+                        <span class="icon-star-full active"></span>
+                     </div>
+                     <span class="author">by Dexter Marchal</span>,
+                     <span class="date">06/10/2016</span>
+                  </div>
+                  <div class="comment-content">
+                     Deb did a great job. Got my bench warrant set aside ... was sure I was
+                     going to jail ... phew. Judge seemed to respect her and I got what I 
+                  </div>
+               </div>
+               <div class="comment border-bottom">
+                  <div class="comment-header">
+                     <div class="star-ratings">
+                        <span class="icon-star-full active"></span>
+                        <span class="icon-star-full active"></span>
+                        <span class="icon-star-full active"></span>
+                        <span class="icon-star-full active"></span>
+                        <span class="icon-star-full active"></span>
+                     </div>
+                     <span class="author">by Dexter Marchal</span>,
+                     <span class="date">06/10/2016</span>
+                  </div>
+                  <div class="comment-content">
+                     Deb did a great job. Got my bench warrant set aside ... was sure I was
+                     going to jail ... phew. Judge seemed to respect her and I got what I 
+                  </div>
+               </div>
+               <div class="comment border-bottom">
+                  <div class="comment-header">
+                     <div class="star-ratings">
+                        <span class="icon-star-full active"></span>
+                        <span class="icon-star-full active"></span>
+                        <span class="icon-star-full active"></span>
+                        <span class="icon-star-full active"></span>
+                        <span class="icon-star-full active"></span>
+                     </div>
+                     <span class="author">by Dexter Marchal</span>,
+                     <span class="date">06/10/2016</span>
+                  </div>
+                  <div class="comment-content">
+                     Deb did a great job. Got my bench warrant set aside ... was sure I was
+                     going to jail ... phew. Judge seemed to respect her and I got what I 
+                  </div>
+               </div>
+               <div class="comment border-bottom">
+                  <div class="comment-header">
+                     <div class="star-ratings">
+                        <span class="icon-star-full active"></span>
+                        <span class="icon-star-full active"></span>
+                        <span class="icon-star-full active"></span>
+                        <span class="icon-star-full active"></span>
+                        <span class="icon-star-full active"></span>
+                     </div>
+                     <span class="author">by Dexter Marchal</span>,
+                     <span class="date">06/10/2016</span>
+                  </div>
+                  <div class="comment-content">
+                     Deb did a great job. Got my bench warrant set aside ... was sure I was
+                     going to jail ... phew. Judge seemed to respect her and I got what I 
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="modal  modal-more-categories" data-title="Modal Content 3" data-modal-id="modal-3">
+         <div class="modal-header ">
+            <h2 class="title"> Other Categories</h2>
+            <p class="sub-title">Choose the category that best fits your case</p>
+         </div>
+         <div class="modal-body">
+            <ul class="two-column-list">
+               <li><a href="#">Abuse (Child, Domestic, Sexual)</a></li>
+               <li><a href="#">Agencies & Administration</a></li>
+               <li><a href="#">Automobile ( DUI, Crimes, Speeding )</a></li>
+               <li><a href="#">Automobiles ( Accidents, Insurance )</a></li>
+               <li><a href="#">Banking ( Business, Consumer )</a></li>
+               <li><a href="#">Bars & Restaurants</a></li>
+               <li><a href="#">Business Formation & Dissolution</a></li>
+               <li><a href="#">Children (Adoption, Custody, Support)</a></li>
+               <li><a href="#">Class Actions (Bad Drugs, Products)</a></li>
+               <li><a href="#">Commercial Law and Contracts</a></li>
+               <li><a href="#">Commercial Real Estate</a></li>
+               <li><a href="#">Constitutional Law</a></li>
+               <li><a href="#">Construction (Disputes, Liens)</a></li>
+               <li><a href="#">Categories Item Here</a></li>
+               <li><a href="#">Loremipsum Dolorsitamet</a></li>
+               <li><a href="#">Lonsectetur Scingelit  (Baseererkj, Mereit)</a></li>
+               <li><a href="#">Miam Euvelit</a></li>
+               <li><a href="#">Mempor Auctor (Estiarma, Toeruslej)</a></li>
+               <li><a href="#">Nisultricies Dictumest</a></li>
+               <li><a href="#">Ntfring Sodalelit (Aeeticl Restoustoust)</a></li>
+               <li><a href="#">Ntvarius Lectus & Congue</a></li>
+               <li><a href="#">Pellentesque</a></li>
+               <li><a href="#">Rigula Aliquamattis (Nestusotu, Wewreist)</a></li>
+               <li><a href="#">Set Tigulempor</a></li>
+               <li><a href="#">Sehicula Sedsitamet</a></li>
+               <li><a href="#">Seque Nesturre</a></li>
+               <li><a href="#">Tollis Gaurissed</a></li>
+               <li><a href="#">Tempor Auctor (Estiarma, Toeruslej)</a></li>
+            </ul>
+         </div>
+      </div>
+   </body>
+   <script src="dist/js/script.min.js"></script>
+</html>

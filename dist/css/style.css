@@ -290,13 +290,20 @@ section.find-lawyer-section .section-subheading {
 
 .star-ratings {
   display: inline-block;
-  padding-left: 20px;
 }
 .star-ratings .active {
   color: #fbd243;
 }
 .star-ratings .inactive {
   color: #97a8a7;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #010101;
 }
 
 .header {
@@ -500,17 +507,24 @@ section.find-lawyer-section .section-subheading {
 .modal-content {
   background-color: #fefefe;
   margin: 15% auto; /* 15% from the top and centered */
-  padding: 30px;
+  padding: 40px;
   border: 1px solid #888;
   width: 600px; /* Set width to 600px */
   border-radius: 5px;
+  position: relative;
+}
+
+.modal-header {
+  padding: 0px 0 20px 0;
 }
 
 .close {
   color: #aaa;
   float: right;
-  font-size: 28px;
+  font-size: 40px;
   font-weight: bold;
+  margin-right: -10px;
+  margin-top: -20px;
 }
 
 .close:hover,
@@ -540,61 +554,194 @@ section.find-lawyer-section .section-subheading {
   border: none;
 }
 
-#modalContent2 .title {
-  font-size: 2.4rem;
-  text-transform: uppercase;
+.modal-categories .title {
+  font-size: 1.8rem;
   font-weight: 400;
   margin: 0;
-  padding-bottom: 10px;
-  border-bottom: 1px solid #010101;
+  text-align: center;
 }
-#modalContent2 .review-profile {
+.modal-categories .title span.bold {
+  font-weight: bold;
+}
+.modal-categories .badge {
+  position: absolute;
+  left: 100px;
+  background-color: #d8921f;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+  font-size: 12px;
+}
+.modal-categories .checkbox-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  padding: 20px 20px 40px 20px;
+}
+.modal-categories .checkbox {
   display: flex;
-  padding: 20px 0 20px 0;
+  align-items: center;
+  margin-bottom: 8px;
 }
-#modalContent2 .review-profile .details {
+.modal-categories .checkbox input[type=checkbox] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 1px solid #97a8a7;
+  border-radius: 3px;
+  margin-right: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+.modal-categories .checkbox input[type=checkbox]:checked {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+.modal-categories .checkbox input[type=checkbox]:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5);
+}
+.modal-categories .checkbox span {
+  font-size: 14px;
+  color: #333;
+}
+.modal-categories .btn-find {
+  display: block;
+  width: auto; /* Set the width as needed */
+  margin: 0 auto; /* Center the button */
+  padding: 20px 20px;
+  background-color: #001e5a;
+  color: white;
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-align: center;
+  border: none;
+  border-radius: 5px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.modal-categories .btn-find:hover {
+  background-color: #fbd243;
+  color: #ffffff;
+}
+.modal-categories .modal-footer {
+  display: none;
+}
+
+.modal-reviews .modal-body {
+  padding: 20px 0px;
+  max-height: 450px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.modal-reviews .title {
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin: 0;
+  padding-bottom: 10px;
+}
+.modal-reviews .review-profile {
+  display: flex;
+  padding: 0 0 20px 0px;
+}
+.modal-reviews .review-profile .details {
   align-content: center;
   padding-left: 20px;
 }
-#modalContent2 .review-profile .details .fullname {
+.modal-reviews .review-profile .details .fullname {
   font-size: 3rem;
 }
-#modalContent2 .review-profile .details .location {
+.modal-reviews .review-profile .details .location {
   font-size: 1.6rem;
   color: #97a8a7;
 }
-#modalContent2 .review-profile .details .position {
+.modal-reviews .review-profile .details .position {
   font-size: 1.6rem;
 }
-#modalContent2 .review-ratings {
+.modal-reviews .review-ratings {
   padding-bottom: 20px;
-  border-bottom: 1px solid #010101;
 }
-#modalContent2 .review-ratings .user-rating {
+.modal-reviews .review-ratings .user-rating {
   font-size: 1.8rem;
+  padding-right: 20px;
 }
-#modalContent2 .review-ratings .icon-star-full {
+.modal-reviews .review-ratings .icon-star-full {
   font-size: 16px;
 }
-#modalContent2 .criteria {
-  padding: 20px 0px;
+.modal-reviews .review-criteria {
+  padding: 20px 0;
   border-bottom: 1px solid #010101;
 }
-#modalContent2 .criteria .criteria-item {
+.modal-reviews .review-criteria-item {
   display: flex;
   justify-content: space-between;
   margin-bottom: 5px;
 }
-#modalContent2 .criteria .overall {
-  font-size: 1.4rem;
-  font-weight: 500;
-}
-#modalContent2 .criteria .criteria-title {
+.modal-reviews .review-criteria-title {
   font-size: 1.4rem;
   justify-content: space-between;
 }
-#modalContent2 .criteria .icon-star-full {
+.modal-reviews .review-criteria .icon-star-full {
   font-size: 16px;
+}
+.modal-reviews .comments .comment {
+  margin-bottom: 20px;
+  padding: 10px;
+}
+.modal-reviews .comments .comment .comment-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.modal-reviews .comments .comment .comment-header .author,
+.modal-reviews .comments .comment .comment-header .date {
+  margin-left: 10px;
+  font-size: 1.4rem;
+  color: #010101;
+  font-weight: bold;
+}
+.modal-reviews .comments .comment .comment-content {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.modal-more-categories .modal-body {
+  max-height: 450px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.modal-more-categories .title {
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin: 0;
+}
+.modal-more-categories .sub-title {
+  font-size: 1.4rem;
+}
+.modal-more-categories .two-column-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  padding: 0;
+}
+.modal-more-categories .two-column-list li {
+  list-style: none;
+}
+.modal-more-categories .two-column-list a {
+  display: block;
+  text-decoration: none;
+  color: #1864af;
+  font-size: 1.4rem;
+}
+.modal-more-categories .two-column-list a:hover {
+  text-decoration: underline;
 }
 
 .search-container {
@@ -653,11 +800,12 @@ section.find-lawyer-section .section-subheading {
   width: 100%;
   margin-top: 10px;
   border-radius: 10px;
+  color: black;
 }
 
 .dropdown-menu li {
   padding: 10px 30px;
-  margin: 10px;
+  margin: 5px 30px;
 }
 
 .dropdown-menu li a {
@@ -681,4 +829,8 @@ section.find-lawyer-section .section-subheading {
   border-top: 7px solid grey;
   border-right: 7px solid transparent;
   border-left: 7px solid transparent;
+}
+
+.dropdown-item {
+  color: black;
 }

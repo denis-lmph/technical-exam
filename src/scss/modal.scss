@@ -10,21 +10,27 @@
   background-color: rgba(0, 0, 0, 0.4); /* Black with opacity */
   color: $black-2;
 }
-
 .modal-content {
   background-color: #fefefe;
   margin: 15% auto; /* 15% from the top and centered */
-  padding: 30px;
+  padding: 40px;
   border: 1px solid #888;
   width: 600px; /* Set width to 600px */
   border-radius: 5px;
+  position: relative;
+}
+
+.modal-header {
+  padding: 0px 0 20px 0;
 }
 
 .close {
   color: #aaa;
   float: right;
-  font-size: 28px;
+  font-size: 40px;
   font-weight: bold;
+  margin-right: -10px;
+  margin-top: -20px;
 }
 
 .close:hover,
@@ -34,7 +40,7 @@
   cursor: pointer;
 }
 
-.modal-footer{
+.modal-footer {
   padding: 30px 0;
 }
 
@@ -45,78 +51,235 @@
   text-transform: uppercase;
   border: 0;
   background: none;
-
 }
 
 #modalCloseBtn:hover,
 #modalCloseBtn:focus {
-
   text-decoration: none;
   cursor: pointer;
   border: none;
 }
 
+.modal-categories {
+  .title {
+    font-size: $font-size-18;
+    font-weight: $font-weight-normal;
+    margin: 0;
+    text-align: center;
 
-#modalContent2 {
+    span.bold {
+      font-weight: $font-weight-bold;
+    }
+  }
+
+  .badge {
+    position: absolute;
+    // // top: 30px;
+    left: 100px;
+    // transform: translateY(-50%);
+    background-color: $secondary-color;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    font-size: 12px;
+  }
+
+  .checkbox-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 20px 20px 40px 20px;
+  }
+
+  .checkbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+
+    input[type="checkbox"] {
+      appearance: none;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      width: 16px;
+      height: 16px;
+      border: 1px solid $gray;
+      border-radius: 3px;
+      margin-right: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s, border-color 0.3s;
+
+      &:checked {
+        background-color: #007bff; // Blue color
+        border-color: #007bff; // Blue color
+      }
+
+      &:focus {
+        outline: none;
+        box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5);
+      }
+    }
+
+    span {
+      font-size: 14px;
+      color: #333;
+    }
+  }
+  .btn-find {
+    display: block;
+    width: auto; /* Set the width as needed */
+    margin: 0 auto; /* Center the button */
+    padding: 20px 20px;
+    background-color: $primary-color;
+    color: white;
+    font-size: $font-size-16;
+    font-weight: $font-weight-bold;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    border-radius: 50px;
+    cursor: pointer;
+    &:hover {
+      background-color: $gold;
+      color: $white;
+    }
+  }
+
+  .modal-footer {
+    display: none;
+  }
+}
+
+.modal-reviews {
+  .modal-body {
+    padding: 20px 0px;
+    max-height: 450px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+
   .title {
     font-size: $font-size-24;
     text-transform: uppercase;
-    font-weight: $font-weight-normal;
+    font-weight: $font-weight-medium;
     margin: 0;
     padding-bottom: 10px;
-    border-bottom: 1px solid $dark;
   }
 
-  .review-profile {
-    display: flex;
-    padding: 20px 0 20px 0;
-    .details {
-      align-content: center;
-      padding-left: 20px;
-      .fullname {
-        font-size: $font-size-30;
-      }
-      .location {
-        font-size: $font-size-16;
-        color: $gray;
-      }
-      .position {
-        font-size: $font-size-16;
-      }
-    }
-  }
-
-  .review-ratings {
-    .user-rating {
-      font-size: $font-size-18;
-    }
-    .icon-star-full {
-      font-size: 16px;
-    }
-    padding-bottom: 20px;
-    border-bottom: 1px solid $dark;
-  }
-
-  .criteria {
-    padding: 20px 0px;
-    border-bottom: 1px solid $dark;
-    .criteria-item {
+  .review {
+    &-profile {
       display: flex;
-      justify-content: space-between;
-      margin-bottom: 5px;
-    }
-    .overall {
-      font-size: $font-size-14;
-      font-weight: $font-weight-medium;
+      padding: 0 0 20px 0px;
+      .details {
+        align-content: center;
+        padding-left: 20px;
+        .fullname {
+          font-size: $font-size-30;
+        }
+        .location {
+          font-size: $font-size-16;
+          color: $gray;
+        }
+        .position {
+          font-size: $font-size-16;
+        }
+      }
     }
 
-    .criteria-title {
-      font-size: $font-size-14;
-      justify-content: space-between;
+    &-ratings {
+      .user-rating {
+        font-size: $font-size-18;
+        padding-right: 20px;
+      }
+      .icon-star-full {
+        font-size: 16px;
+      }
+      padding-bottom: 20px;
     }
 
-    .icon-star-full {
-      font-size: 16px;
+    &-criteria {
+      padding: 20px 0;
+      border-bottom: 1px solid $dark;
+      &-item {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 5px;
+      }
+      &-title {
+        font-size: $font-size-14;
+        justify-content: space-between;
+      }
+      .icon-star-full {
+        font-size: 16px;
+      }
     }
+  }
+
+  .comments {
+    .comment {
+      margin-bottom: 20px;
+      padding: 10px;
+      .comment-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+        .author,
+        .date {
+          margin-left: 10px;
+          font-size: $font-size-14;
+          color: $dark;
+          font-weight: $font-weight-bold;
+        }
+      }
+      .comment-content {
+        font-size: 16px;
+        line-height: 1.5;
+      }
+    }
+  }
+}
+
+.modal-more-categories {
+  .modal-body {
+
+    max-height: 450px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+  }
+
+  .title {
+    font-size: $font-size-24;
+    text-transform: uppercase;
+    font-weight: $font-weight-medium;
+    margin: 0;
+  }
+
+  .sub-title {
+    font-size: $font-size-14;
+  }
+
+  .two-column-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+    padding: 0;
+  }
+
+  .two-column-list li {
+    list-style: none;
+  }
+
+  .two-column-list a {
+    display: block;
+
+    text-decoration: none;
+    color: #1864af;
+    font-size: $font-size-14;
+  }
+
+  .two-column-list a:hover {
+    text-decoration: underline;
   }
 }

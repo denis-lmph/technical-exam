@@ -34,14 +34,15 @@
     width: 100%;
     margin-top: 10px;
     border-radius: 10px;
-
+    color: black;
   }
   
   .dropdown-menu li {
     padding: 10px 30px;
-    margin: 10px;
+    margin: 5px 30px;
   }
-  
+
+
   .dropdown-menu li a{
     text-decoration: none;
     color: $dark;
@@ -63,5 +64,9 @@
     border-top: 7px solid grey;
     border-right: 7px solid transparent;
     border-left: 7px solid transparent;
+  }
+  
+  .dropdown-item {
+    color: black;
   }
   

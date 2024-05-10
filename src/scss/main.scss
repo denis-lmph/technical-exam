@@ -214,11 +214,19 @@ section.find-lawyer-section {
 
 .star-ratings {
   display: inline-block;
-  padding-left: 20px;
+
   .active {
     color: $gold;
   }
   .inactive {
     color: $gray;
   }
+}
+
+.bold{
+  font-weight: $font-weight-bold;
+}
+
+.border-bottom{
+  border-bottom: 1px solid $dark;
 }
