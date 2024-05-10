@@ -651,7 +651,7 @@ section.find-lawyer-section .section-subheading {
 }
 .modal-reviews .review-profile {
   display: flex;
-  padding: 0 0 20px 0px;
+  padding: 20px 0 20px 0px;
 }
 .modal-reviews .review-profile .details {
   align-content: center;
